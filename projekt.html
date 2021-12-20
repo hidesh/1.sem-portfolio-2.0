@@ -14,6 +14,8 @@
 </head>
 <body>
     <main>
+        <!--Navigation bar, som jeg har fået inspiration fra W3School - "Responsive Top Navigation", og gjort det til mit eget -->
+        <!--link: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
         <header>
             <div class="topnav" id="myTopnav">
                 <a href="index.html#home" class="#"><img src="Billeder_og_logo/Hidesh_logo_1.png"  alt="logo" class="navlogo"></a>
@@ -27,6 +29,7 @@
             </div>
         </header>
     </main>
+    <!--En indledning-->
         <section>
             <h6>Projekter</h6>
                 <div class="center">
@@ -72,7 +75,7 @@
             </div>
         </div>
         </section>
-
+        <!--Musik projekter-->
         <section id="musik">
             <img src="Billeder_og_logo/Iconawesome-music.png" alt="musicLogo" class="logo" style="padding-top: 3em; padding-bottom: 3em;">
         <div class="cardsproject">   
@@ -107,7 +110,7 @@
             </div>
         </div>
         </section>
-
+        <!--Video projekter-->
         <section id="video">
                     <img src="Billeder_og_logo/Iconawesome-video.png" alt="VideoLogo" class="logo" style="padding-top: 3em; padding-bottom: 3em;">
                 <div class="container">
@@ -124,7 +127,7 @@
         </section>
        
 
-
+    <!--Footer med href links til forskellige sociale medier-->     
         <footer class="footer">
             <p class="text">hidesh@live.dk</p>
               <br>
@@ -152,6 +155,7 @@
     <script>
         function myFunction() {
         var x = document.getElementById("myTopnav");
+        //benyttelse af if statement
         if (x.className === "topnav") {
             x.className += " responsive";
         } else {
@@ -161,13 +165,15 @@
     </script>
 
     <!-- JS til footer knap-->
+    <!--Jeg har valgt at bruge inspiration fra https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
     <script>
-        //Get the button
+        //Her har vi vores variable, som angiver knappen, også kaldet på engelsk "identifiers".
         var mybutton = document.getElementById("myBtn");
         
-        // When the user scrolls down 20px from the top of the document, show the button
+        //Når brugeren har scrollede ned 20px pixels from toppen, visser den knappen
         window.onscroll = function() {scrollFunction()};
         
+        //benyttelse af if statement
         function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             mybutton.style.display = "block";
@@ -176,7 +182,7 @@
         }
         }
         
-        // When the user clicks on the button, scroll to the top of the document
+        // Når brugeren klikker på knappen scroll den op til top.
         function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;

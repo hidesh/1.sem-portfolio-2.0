@@ -2,7 +2,8 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+
+/*Tekst classes*/  
   h1 {
       -webkit-text-stroke: 0.2px black; 
       color: #faca23;
@@ -69,16 +70,46 @@ body {
     margin-bottom: auto;
   }
 
+/*Centerboks så elementerne kan være centreret*/
   .center{
     margin: auto;
     display: block;
     width: 80%; 
 }
 
+/*Container*/
   .textbox{
     border: 3px solid white;
   }
 
+  .grid-containerbox {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+  }
+
+  .container{
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: block;
+    width: 80%; 
+  }
+
+  .containerbox {
+    border: 3px solid black;
+    border-radius: 2em;
+  }
+
+  .imageBox{
+    height: auto;
+    max-width: 100%;
+    display: block;
+    padding-bottom: 5%;
+    margin: auto;
+  }
+
+/*Class til justering af første billede af mig*/
   .headimage{
     max-width: 60%;
     max-height: 100%;
@@ -89,6 +120,7 @@ body {
     margin-top: 30px;
   }
 
+/*Knapper*/
   a.button1{
     background-color:#faca23 ;
     color: black;
@@ -119,6 +151,7 @@ body {
     text-align: center;
   }
 
+  /*Billede justeringer og deres classes*/
   .logo{
     margin: auto;
     display: block;
@@ -129,33 +162,6 @@ body {
       margin: auto
   }
 
-  .grid-containerbox {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
-  }
-
-  .container{
-    margin: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    display: block;
-    width: 80%; 
-  }
-
-  .containerbox {
-    border: 3px solid black;
-    border-radius: 2em;
-  }
-
-  .imageBox{
-    height: auto;
-    max-width: 100%;
-    display: block;
-    padding-bottom: 5%;
-    margin: auto;
-  }
-
   .screenshot{
     height: 50%;
     width: 50%;
@@ -164,6 +170,7 @@ body {
     margin: auto;
   }
 
+/*Lyd class*/
   .audioimage{
     display: flex;
     width: 4rem;
@@ -180,6 +187,7 @@ body {
     padding-bottom: 2em;
 }
 
+/*Grid der giver mig muligheden for at ændre det fra rows til coloumns, så det passer perfekt til både mobil og desktop*/
 .cards {
     max-width: 100%;
     margin: 0 auto;
@@ -201,19 +209,19 @@ body {
     grid-gap: 1rem;
 }
 
-/* kontakt form */
+/* kontakt form - https://www.w3schools.com/html/html_forms.asp */
 input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
 }
 
-/* Style the submit button with a specific background color etc */
+/* Kontakt formlar med min egen styling */
 input[type=submit] {
   background-color:#faca23 ;
   color: black;
@@ -223,20 +231,20 @@ input[type=submit] {
   cursor: pointer;
   display: block;
   margin: auto;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
 }
 
 
-  /* navbar */
+  /* navbar med egen styling - https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
  
-  /* Add a black background color to the top navigation */
+  /* Baggrund til navbar*/
 .topnav {
     background-color: rgb(0, 0, 0);
     overflow: hidden;
   }
   
-  /* Style the links inside the navigation bar */
+  /* styling af links i navbaren */
   .topnav a {
     float: left;
     display: block;
@@ -247,23 +255,24 @@ input[type=submit] {
     font-size: 1.5rem;
   }
   
-  /* Change the color of links on hover */
+  /* Farve skifte når der hover over dem */
   .topnav a:hover {
     background-color: #ddd;
     color: black;
   }
   
-  /* Add an active class to highlight the current page */
+  /* En aktiv class der ikke har en hvid highlight for at indikere på hvilken side man er på */
   .topnav a.active {
     background-color: black;
     color: white;
   }
   
-  /* Hide the link that should open and close the topnav on small screens */
+  /* For markering af den aktive link til at forsvinde når der bliver klikket*/
   .topnav .icon {
     display: none;
   }
 
+  /*Mit eget logo*/
   .topnav .navlogo {
     max-width: 3rem;
     min-height: 2rem
@@ -314,11 +323,14 @@ input[type=submit] {
     border: transparent;
   }
   
+  /*video størrelse til den embed youtube video*/
   .videosize{
       width: 100%;
-      height: 500px;
+      height: 700px;
+      border-width: 0px;
   }
 
+  /*Forskellige fonte jeg blev nød til at fremkalde lokalt*/
   @font-face {
       font-family: nexaboldX;
       src: url(fonts/NexaXBold.otf);
@@ -334,6 +346,8 @@ input[type=submit] {
       src: url(fonts/slice.ttf);
   }
 
+
+/*media quries - Gøre hjemmesiden responsive ved hjælp af breakpoints*/
   @media screen and (min-width:900px) {
       .cards{grid-template-columns: repeat(3, 1fr);}
       .logo {

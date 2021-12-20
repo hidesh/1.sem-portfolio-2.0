@@ -14,6 +14,8 @@
 </head>
 <body>
     <main>
+        <!--Navigation bar, som jeg har fået inspiration fra W3School - "Responsive Top Navigation", og gjort det til mit eget -->
+        <!--link: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
         <header>
             <div class="topnav" id="myTopnav">
                 <a href="#home" class="#"><img src="Billeder_og_logo/Hidesh_logo_1.png" alt="logo" class="navlogo"></a>
@@ -27,6 +29,7 @@
             </div>
         </header>
     </main>
+        <!--Hjem - Her ser man mit billede, og hvad jeg laver-->
         <section id="home">
             <div class="topcards">
                     <img src="Billeder_og_logo/hidesh.jpg" class="headimage" alt="Billede af Hidesh">
@@ -43,6 +46,9 @@
                     </div> 
             </div>    
         </section>
+
+        <!--Om mig sektion - Forklare hvem jeg er som person med mine erfaringer: benyttet mig af grid funktionen, og center class -->
+
         <section id="omMig">
             <div class="center">
                 <div class="textbox">
@@ -56,12 +62,13 @@
                                     programmer som Fl Studio og Logic Pro, og kan kalde mig erfaren Music-engineer og composer.
                                 </h4>
                                 <p></p> 
-                                <h4>I mit liv har jeg stiftet erfaring med programmer og kodesprog som Adobe premiere pro, Adobe XD, Photoshop, HTML, CSS og meget mere. Derudover har jeg også gået på NEXT Sukkertoppen og havde studieretningen "Computer Science".
-                                    Her fik jeg også muligheden for at lærer mange andre ting at kende så som forskellige kodesprog</h4>
+                                <h4>I mit liv har jeg stiftet erfaring med programmer og kodesprog som Adobe premiere pro, Adobe XD, Photoshop, HTML, CSS og meget mere. Derudover har jeg også gået på NEXT Sukkertoppen og studieretningen "Computer Science".
+                                    Her fik jeg også muligheden for at lærer mange andre ting at kende, igennem fagene informatik og programmering</h4>
                                 <p></p> 
                                 <h4>Jeg er en meget energisk og frisk person som altid vil udfordrer sig selv, så kontakt mig ved trykke på knappen, så lover jeg at du får den bedste service og produkt!</h4>
                 </div>  
             </div> 
+            <!--Kontakt mig button som dirigere til kontakt mig #id-->
             <a href="#kontakt" class="button1">Kontakt mig</a>
         </section>
 
@@ -112,7 +119,7 @@
         </div>
         </section>
 
-        <!--Kontakt formular-->
+        <!--Kontakt formular - https://www.w3schools.com/html/html_forms.asp - Hjælp fra W3Schools, med en meget fin formulerende forklaring -->
         <section>
 
             <div class="center">
@@ -123,6 +130,7 @@
             </div>
 
             <div  class="container">
+                <!--Normalt ville der havde været sat en PHP-fil, men da vi ikke har arbejdet med det i nu holder jeg den tom-->
                 <form action="#">
                     <label for="navn">Navn</label>
                     <input type="text" id="navn" name="navn" placeholder="Dit navn...">
@@ -138,7 +146,7 @@
             </div>
         </section>
 
-       
+    <!--Footer med href links til forskellige sociale medier-->   
     <footer class="footer">
       <p class="text">hidesh@live.dk</p>
         <br>
@@ -151,7 +159,8 @@
         <br>
       <p class="text">©2021 Hidesh Kumar</p>
       <div>
-          <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="Billeder_og_logo/ScrollButton.png" alt="scrollButton"></button>
+          <!--En "Gå op" knap, som den her funktion til at gå til toppen af siden-->
+          <button onclick="topFunction()" id="myBtn" title="Gå til top"><img src="Billeder_og_logo/ScrollButton.png" alt="scrollButton"></button>
       </div>
       
      
@@ -168,6 +177,7 @@
     <script>
         function myFunction() {
         var x = document.getElementById("myTopnav");
+        //benyttelse af if statement
         if (x.className === "topnav") {
             x.className += " responsive";
         } else {
@@ -177,13 +187,15 @@
     </script>
 
     <!-- JS til footer knap-->
+    <!--Jeg har valgt at bruge inspiration fra https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
     <script>
-        //Get the button
+        //Her har vi vores variable, som angiver knappen, også kaldet på engelsk "identifiers".
         var mybutton = document.getElementById("myBtn");
         
-        // When the user scrolls down 20px from the top of the document, show the button
+        //Når brugeren har scrollede ned 20px pixels from toppen, visser den knappen
         window.onscroll = function() {scrollFunction()};
         
+        //benyttelse af if statement
         function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             mybutton.style.display = "block";
@@ -192,7 +204,7 @@
         }
         }
         
-        // When the user clicks on the button, scroll to the top of the document
+        // Når brugeren klikker på knappen scroll den op til top.
         function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
